@@ -24,6 +24,7 @@ const forums = [
   },
   {
     id: 2,
+    imageUrl: bse,
     profilePic: Manprofile,
     name: "Lorem Ipsum",
     sector: 2,
@@ -38,6 +39,7 @@ const forums = [
   },
   {
     id: 3,
+    imageUrl: bse,
     profilePic: Womanprofile,
     name: "Lorem Ipsum",
     sector: 3,
@@ -67,6 +69,7 @@ const forums = [
   },
   {
     id: 5,
+    imageUrl: bse,
     profilePic: Womanprofile,
     name: "Lorem Ipsum",
     sector: 1,
