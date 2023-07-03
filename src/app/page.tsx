@@ -5,7 +5,7 @@ import MobileView from './components/MobileView';
 import HomePage from './components/HomePage';
 
 export default function Home() {
-  let mob = true;
+  let mob = false;
   if (typeof window !== 'undefined') {
     mob = window.innerWidth <= 768;
   }

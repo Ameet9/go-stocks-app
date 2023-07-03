@@ -6,8 +6,8 @@ import PropTypes from 'prop-types'
 export default function StoriesComponent({ isOpen }) {
     return (
         <>
-            <div className='h-[800px] mt-3 custom-scroll'>
-                <div className={`grid gap-4 ${isOpen ? "grid-cols-1" : "grid-cols-2"}`}>
+            <div className='h-[800px] mt-3 custom-scroll m-4'>
+                <div className={`grid grid-cols-1 gap-4 ${isOpen ? "sm:grid-cols-1" : "sm:grid-cols-2"}`}>
                     {stories.map((i) => (
                         <div
                             key={i.id}

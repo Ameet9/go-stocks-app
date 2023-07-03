@@ -6,6 +6,20 @@ import Image from 'next/image';
 import dummyStocks from "../rawData/DummyData";
 
 export default function HeaderNav() {
+    const [isMobileView, setIsMobileView] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobileView(window.innerWidth < 768); // Set the threshold as per your mobile breakpoint
+        };
+
+        handleResize(); // Call it initially to set the initial view
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     return (
         <>
             <div className='grid grid-rows-3'>
@@ -20,14 +34,14 @@ export default function HeaderNav() {
                         </div>
                     </div>
                     <div className='flex-none justify-center items-center'>
-                        {/* <Image src={profileImageUrl} alt='' width={30}></Image> */}
-                        <div className='grid grid-cols-3 gap-4 '>
-                            <div className='p-2'>
-                                <h1>Contact Us</h1>
-                            </div>
-                            <button className='border border-black p-2  px-4 rounded shadow-lg'>SIGN UP</button>
-                            <button className='border border-black p-2  px-4 rounded shadow-lg'>SIGN IN</button>
-                        </div>
+                        {isMobileView ? <Image src={profileImageUrl} alt='' width={40}></Image> :
+                            <div className='grid grid-cols-3 gap-4 '>
+                                <div className='p-2'>
+                                    <h1>Contact Us</h1>
+                                </div>
+                                <button className='border border-black p-2  px-4 rounded shadow-lg'>SIGN UP</button>
+                                <button className='border border-black p-2  px-4 rounded shadow-lg'>SIGN IN</button>
+                            </div>}
                     </div>
                 </div>
                 <div className='row-span-1 bg-blue-950 h-8 ' >

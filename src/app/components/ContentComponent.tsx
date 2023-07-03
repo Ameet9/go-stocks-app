@@ -27,13 +27,17 @@ export default function ContentComponent() {
                     </button >
                 </div >
                 <div className={isOpen ? "relative ml-72" : "relative ml-10"}>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 bg-blue-950 sm:bg-white  p-2">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2   p-2">
                         <div>
-                            <h1 className='text-white sm:text-red-300 font-bold'>DISCUSSION FORUM</h1>
+                            <div className='bg-blue-950 sm:bg-white'>
+                                <h1 className='text-white sm:text-red-300 font-bold'>DISCUSSION FORUM</h1>
+                            </div>
                             <DiscussionComponent></DiscussionComponent>
                         </div>
                         <div>
-                            <h1 className='text-white sm:text-red-300 font-bold'>MARKET STORIES</h1>
+                            <div className='bg-blue-950 sm:bg-white'>
+                                <h1 className='text-white sm:text-red-300 font-bold'>MARKET STORIES</h1>
+                            </div>
                             <StoriesComponent isOpen={isOpen}></StoriesComponent>
                         </div>
                     </div>

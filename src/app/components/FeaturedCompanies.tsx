@@ -7,7 +7,7 @@ export default function FeaturedCompanies() {
         <>
             <div className='bg-gray-300'>
                 <div className='p-2'>
-                    <h1>Featured Companies</h1>
+                    <h1 className='font-bold'>Featured Companies</h1>
                 </div>
                 <div className='grid grid-cols-10 gap-3 bg-slate-400 p-3'>
                     {dummyLogos.map((s) => (
