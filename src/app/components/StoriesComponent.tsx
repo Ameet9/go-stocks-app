@@ -13,7 +13,7 @@ export default function StoriesComponent({ isOpen }) {
                             key={i.id}
                             className='rounded   shadow-lg relative overflow-hidden h-[300px]'
                         >
-                            <Image src={i.imageUrl} alt='' className='storiesImg' />
+                            <Image src={i.imageUrl} alt='' className='storiesImg w-full' height={400} />
                             <div className='absolute bottom-0 left-0 w-full bg-opacity-50 bg-black text-white p-2'>
                                 <p className='text-sm font-bold'>{i.title}</p>
                             </div>

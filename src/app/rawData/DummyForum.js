@@ -82,6 +82,37 @@ const forums = [
     comments: "1k",
     shareIconUrl: share,
   },
+  ,
+  {
+    id: 6,
+    imageUrl: bse,
+    profilePic: Womanprofile,
+    name: "Lorem Ipsum",
+    sector: 2,
+    postContent:
+      "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.",
+    likes: "2k",
+    viewIconUrl: view,
+    views: "2k",
+    commentIconUrl: comment,
+    comments: "1k",
+    shareIconUrl: share,
+  },
+  {
+    id: 7,
+    imageUrl: bse,
+    profilePic: Manprofile,
+    name: "Lorem Ipsum",
+    sector: 3,
+    postContent:
+      "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.",
+    likes: "2k",
+    viewIconUrl: view,
+    views: "2k",
+    commentIconUrl: comment,
+    comments: "1k",
+    shareIconUrl: share,
+  },
 ];
 
 export default forums;
