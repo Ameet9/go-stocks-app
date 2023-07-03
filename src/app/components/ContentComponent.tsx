@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import arrow from "../../../public/tri.png";
 import Image from 'next/image';
+import add from "../../../public/add.png";
 import DiscussionComponent from './DiscussionComponent';
 import StoriesComponent from './StoriesComponent';
 import SideNavBar from './SideNavBar';
@@ -13,7 +14,10 @@ export default function ContentComponent() {
     };
     return (
         <>
-            <div className="relative min-h-screen ">
+            <div className="relative min-h-full bg-gray-200">
+                <div className='fixed bottom-6 right-10 z-30'>
+                    <Image src={add} alt='' width={40} height={40}></Image>
+                </div>
                 <div
                     className={`absolute left-0 min-h-full w-60 bg-blue-950 text-white transition-transform transform ${isOpen ? "translate-x-0" : "-translate-x-full"
                         }`}
@@ -29,14 +33,14 @@ export default function ContentComponent() {
                 <div className={isOpen ? "relative ml-72" : "relative ml-10"}>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2   p-2">
                         <div>
-                            <div className='bg-blue-950 sm:bg-white'>
-                                <h1 className='text-white sm:text-red-300 font-bold'>DISCUSSION FORUM</h1>
+                            <div className='bg-blue-950 sm:bg-gray-200'>
+                                <h1 className='text-white sm:text-red-400 font-bold'>DISCUSSION FORUM</h1>
                             </div>
                             <DiscussionComponent></DiscussionComponent>
                         </div>
                         <div>
-                            <div className='bg-blue-950 sm:bg-white'>
-                                <h1 className='text-white sm:text-red-300 font-bold'>MARKET STORIES</h1>
+                            <div className='bg-blue-950 sm:bg-gray-200 mb-10'>
+                                <h1 className='text-white sm:text-red-400 font-bold'>MARKET STORIES</h1>
                             </div>
                             <StoriesComponent isOpen={isOpen}></StoriesComponent>
                         </div>

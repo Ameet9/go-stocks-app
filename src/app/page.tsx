@@ -8,6 +8,8 @@ export default function Home() {
   let mob = false;
   if (typeof window !== 'undefined') {
     mob = window.innerWidth <= 768;
+    console.log(mob);
+
   }
   const [screenValidation, setScreen] = useState(mob);
 
@@ -34,6 +36,7 @@ export default function Home() {
   }, []);
   return (
     <>
+      <h1>{screenValidation}</h1>
       {screenValidation ? (
         <MobileView></MobileView>
       ) : (

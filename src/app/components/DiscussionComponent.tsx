@@ -7,7 +7,7 @@ export default function DiscussionComponent() {
     const [selectedSector, setSelectedSector] = useState(0);
 
     const filteredForums = selectedSector
-        ? forums.filter((item) => item.sector === selectedSector)
+        ? forums.filter((x) => x.sector === selectedSector)
         : forums;
     return (
         <>
@@ -15,7 +15,7 @@ export default function DiscussionComponent() {
                 <div className='p-1 sm:p-2' onClick={() => setSelectedSector(0)}>
                     <h1 className='font-bold'>Filters</h1>
                 </div>
-                <div className='flex rounded p-2 shadow-lg gap-3 '>
+                <div className='flex rounded p-2 shadow-lg gap-3 bg-white'>
                     <button className='sm:grow bg-red-400 text-white rounded-full p-1 sm:rounded-3xl whitespace-nowrap' onClick={() => setSelectedSector(1)}>Sector 1</button>
                     <button className='sm:grow bg-blue-400 text-white rounded-full p-1 sm:rounded-3xl whitespace-nowrap' onClick={() => setSelectedSector(2)}>Sector 2</button>
                     <button className='sm:grow bg-yellow-400 text-white rounded-full p-1 sm:rounded-3xl whitespace-nowrap' onClick={() => setSelectedSector(3)}>Sector 3</button>
@@ -28,7 +28,7 @@ export default function DiscussionComponent() {
                         {filteredForums.map((item, index) => (
                             <div
                                 key={index}
-                                className="w-full p-4 border mb-4 border-gray-200 shadow-xl rounded-lg"
+                                className="w-full p-4 border mb-4 border-gray-200 shadow-xl rounded-lg bg-white"
                             >
                                 <AllForumComponent item={item}></AllForumComponent>
                             </div>

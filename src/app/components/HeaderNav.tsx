@@ -6,18 +6,31 @@ import Image from 'next/image';
 import dummyStocks from "../rawData/DummyData";
 
 export default function HeaderNav() {
-    const [isMobileView, setIsMobileView] = useState(false);
+    let mob = false;
+    if (typeof window !== 'undefined') {
+        mob = window.innerWidth <= 768;
+        console.log("mob", mob);
+    }
+    const [isMobileView, setIsMobileView] = useState(mob);
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobileView(window.innerWidth < 768); // Set the threshold as per your mobile breakpoint
+            let isMobile = false;
+            if (typeof window !== 'undefined') {
+                isMobile = window.innerWidth <= 768;
+            }
+            setIsMobileView(isMobile); // Set the threshold as per your mobile breakpoint
         };
 
         handleResize(); // Call it initially to set the initial view
-        window.addEventListener('resize', handleResize);
+        if (typeof window !== 'undefined') {
+            window.addEventListener('resize', handleResize);
+        }
 
         return () => {
-            window.removeEventListener('resize', handleResize);
+            if (typeof window !== 'undefined') {
+                window.removeEventListener('resize', handleResize);
+            }
         };
     }, []);
     return (

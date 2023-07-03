@@ -9,7 +9,7 @@ import Image from 'next/image';
 export default function FooterNav() {
     return (
         <>
-            <div className='bg-blue-800 h-10 bottom-0 w-full'>
+            <div className='bg-blue-950 h-10 bottom-0 w-full'>
                 <div className='grid grid-flow-col auto-cols-max gap-3 justify-between items-center py-2 px-5'>
                     <Image src={menu} alt='' height={25} width={25}></Image>
                     <Image src={home} alt='' height={25} width={25}></Image>

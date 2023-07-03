@@ -37,8 +37,8 @@ export default function AllForumComponent({ item }: AllForumComponentProps) {
             </div>
             <div className='grid gap-3 grid-flow-row auto-rows-max mt-3'>
                 <div className='flex gap-3 items-center'>
-                    <Image src={item.profilePic} alt='' width={30} height={30} className='rounded-full'></Image>
-                    <h1>{item.name}</h1>
+                    <Image src={item.profilePic} alt='' width={30} height={40} className='rounded-full'></Image>
+                    <h1 className='font-bold'>{item.name}</h1>
                     <button className={
                         item.sector === 1 ? "bg-red-400 p-2 rounded-3xl" : item.sector === 2 ? "bg-blue-400 p-2 rounded-3xl" : "bg-yellow-400 p-2 rounded-3xl"
                     }>Sector {item.sector}</button>
@@ -66,7 +66,7 @@ export default function AllForumComponent({ item }: AllForumComponentProps) {
                     <button>
                         <Image src={item.commentIconUrl} alt='' height={20} width={20}></Image>
                     </button>
-                    <p>{item.comments}</p>
+                    <p>{item.comments} Comments</p>
                 </div><div className='grid grid-cols-2'>
                     <button>
                         <Image src={item.shareIconUrl} alt='' height={20} width={20}></Image>

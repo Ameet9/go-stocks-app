@@ -27,7 +27,7 @@ export default function SideNavBar() {
             <div className='grid grid-flow-row auto-rows-max'>
                 {
                     sideNavTitles.map((i) => (
-                        <div className='hover:bg-blue-400 p-4'>
+                        <div key={i} className='hover:bg-blue-900 p-4'>
                             <h1>{i}</h1>
                         </div>
                     ))
