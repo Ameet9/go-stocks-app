@@ -39,7 +39,7 @@ export default function ContentComponent() {
                             <DiscussionComponent></DiscussionComponent>
                         </div>
                         <div>
-                            <div className='bg-blue-950 sm:bg-gray-200 mb-10'>
+                            <div className='bg-blue-950 sm:bg-gray-200 mb-14'>
                                 <h1 className='text-white sm:text-red-400 font-bold'>MARKET STORIES</h1>
                             </div>
                             <StoriesComponent isOpen={isOpen}></StoriesComponent>
